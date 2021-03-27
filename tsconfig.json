@@ -1,37 +1,37 @@
 {
-    "include": [
-        "./src/**/*"
+  "include": [
+    "./src/**/*"
+  ],
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types",
+      "./@types"
     ],
-    "compilerOptions": {
-        "typeRoots": [
-            "./node_modules/@types",
-            "./@types"
-        ],
-        "sourceMap": true,
-        "target": "es5",
-        "jsx": "react",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "strict": true,
-        "outDir": "build",
-        "lib": [
-            "es6",
-            "es7",
-            "dom"
-        ],
-        "baseUrl": "./src",
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "resolveJsonModule": true,
-        "paths": {
-            "app/*": [
-                "./app/*"
-            ]
-        },
-        "skipLibCheck": true
-    }
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "outDir": "build",
+    "lib": [
+      "es6",
+      "es7",
+      "dom"
+    ],
+    "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "noEmit": true
+  }
 }

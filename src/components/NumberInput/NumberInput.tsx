@@ -33,4 +33,5 @@ function NumberInput({
   return <TextInput {...rest} InputProps={{ ...InputProps, ...numberInput }} />;
 }
 
-export { NumberInput, Props as NumberInputProps };
+export { NumberInput };
+export type { Props as NumberInputProps };

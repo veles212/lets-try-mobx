@@ -101,4 +101,5 @@ const TextInput = ({
   }
 };
 
-export { TextInput, Props as TextInputProps };
+export { TextInput };
+export type { Props as TextInputProps };

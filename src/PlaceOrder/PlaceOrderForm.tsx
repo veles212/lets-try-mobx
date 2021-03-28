@@ -21,8 +21,14 @@ export const PlaceOrderForm = observer(() => {
     setPrice,
     setAmount,
     setTotal,
-    setOrderSide
+    setOrderSide,
+    validateTargets
   } = useStore();
+
+  const handleSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault();
+    validateTargets();
+  };
 
   return (
     <form className={b()}>
@@ -60,13 +66,14 @@ export const PlaceOrderForm = observer(() => {
         />
       </div>
       <div className={b("take-profit")}>
-        <TakeProfit orderSide={activeOrderSide} />
+        <TakeProfit />
       </div>
       <div className="submit">
         <Button
           color={activeOrderSide === "buy" ? "green" : "red"}
           type="submit"
           fullWidth
+          onClick={handleSubmit}
         >
           {activeOrderSide === "buy"
             ? `Buy ${BASE_CURRENCY}`
